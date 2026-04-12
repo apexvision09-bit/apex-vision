@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Apex Visioners</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#050505;
+color:white;
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#111;
+z-index:1000;
+box-sizing:border-box;
+}
+
+nav div:last-child{
+display:flex;
+gap:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#00ff88;
+}
+
+/* HERO TITLE */
+
+.hero{
+padding-top:190px; /* headline moved higher */
+text-align:center;
+padding-left:20px;
+padding-right:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#aaa;
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+/* IMAGE + BLOCK SECTION */
+
+.section{
+padding:40px 30px;
+}
+
+.container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+max-width:1100px;
+margin:auto;
+}
+
+/* IMAGE */
+
+.image-box{
+flex:1;
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.image-box.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.image-box img{
+width:320px;
+height:500px;
+object-fit:cover;
+border-radius:16px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+/* TEXT BLOCKS */
+
+.blocks{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.block{
+background:#111;
+padding:18px;
+border-radius:12px;
+border-left:4px solid #00ff88;
+opacity:0;
+transform:translateY(60px);
+transition:0.8s;
+}
+
+.block.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.block:hover{
+box-shadow:0 0 15px rgba(0,255,136,0.3);
+}
+
+/* FEATURES */
+
+.features{
+max-width:1100px;
+margin:60px auto 0 auto;
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* BUTTON */
+
+.btn-area{
+text-align:center;
+margin-top:50px;
+margin-bottom:120px;
+}
+
+button{
+padding:14px 28px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#00ff88;
+cursor:pointer;
+}
+
+button:hover{
+background:#00cc6a;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.container{
+flex-direction:column;
+text-align:center;
+}
+
+.image-box img{
+width:260px;
+height:420px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div>
+<b>Apex Visioners</b>
+</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>
+Turning Your Moments Into Cinematic Masterpieces
+</h1>
+
+<p>
+Professional video editing agency specializing in wedding films, reels, and high-quality content for creators and businesses worldwide.
+</p>
+
+</div>
+
+<!-- IMAGE + TEXT -->
+
+<div class="section">
+
+<div class="container">
+
+<div class="image-box fade">
+<img src="wedding-vertical.jpg">
+</div>
+
+<div class="blocks">
+
+<div class="block fade">
+<b>We Are Apex Visioners — A Professional Video Editing Agency</b>
+<br><br>
+We are a dedicated team of professional video editors focused on delivering cinematic, emotionally engaging, and visually polished videos.
+</div>
+
+<div class="block fade">
+Our team specializes in cinematic storytelling, smooth transitions, music synchronization, and professional color grading.
+</div>
+
+<div class="block fade">
+From wedding highlights and reels to corporate content, we transform ordinary footage into engaging visual experiences.
+</div>
+
+<div class="block fade">
+We maintain clear communication, consistent quality, and reliable turnaround times for every client.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<div class="block fade" style="flex:1;min-width:250px;text-align:center;">
+<b>Reliable</b>
+<br><br>
+We deliver projects on time with consistent communication.
+</div>
+
+<div class="block fade" style="flex:1;min-width:250px;text-align:center;">
+<b>Professional</b>
+<br><br>
+We use industry-standard tools for high-quality results.
+</div>
+
+<div class="block fade" style="flex:1;min-width:250px;text-align:center;">
+<b>Expert Wedding Editors</b>
+<br><br>
+Deep expertise in wedding highlights and cinematic storytelling.
+</div>
+
+</div>
+
+<!-- BUTTON -->
+
+<div class="btn-area">
+
+<button onclick="location.href='portfolio.html'">
+View Portfolio
+</button>
+
+</div>
+
+<script>
+
+const elements = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+elements.forEach(el => observer.observe(el));
+
+</script>
+
+</body>
+</html>
