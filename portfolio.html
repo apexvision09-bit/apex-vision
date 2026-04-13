@@ -1,5 +1,15 @@
-<!DOCTYPE html><html>  <head>  
-<title>Portfolio</title><style>  body{
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Portfolio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
 margin:0;
 font-family:Arial;
 background:#050505;
@@ -81,75 +91,103 @@ font-size:32px;
 color:#00ff88;
 }
 
-/* MODAL */
+</style>
 
-#modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-z-index:9999;
-}
+</head>
 
-iframe{
-width:100%;
-height:100%;
-border:none;
-}
+<body>
 
-</style></head><body><nav><div>
+<nav>
+
+<div>
 <b>Apex Visioners</b>
+</div>
 
-</div><div>  
-<a href="index.html">Home</a>  
-<a href="portfolio.html">Portfolio</a>  
-<a href="contact.html">Contact</a>  
-</div></nav><div class="section"><h2>Wedding Highlights</h2><div class="grid"><div class="card" onclick="openVid('https://drive.google.com/file/d/1Sv7QPxdmAh2rLZmDKv_78ujfGZOj6Cb_/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/1-_XcmoaqxBEMNXv0-1qpV7GyFEghfxDS/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/1T3JuIqc21HyKIykf6Ewt1iOYoPYmYgxD/preview')">  
-<div class="play">▶</div>  
-</div></div><h2>Wedding Teasers</h2><div class="grid"><div class="card" onclick="openVid('https://drive.google.com/file/d/1FrXtLo1ElCcjUCMpt2PDi5ujMHcgOJLT/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/1JKxOK9O26qe5ssRSxdalQklBYA-l2o9f/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/1jRsGDKLc7ItPzVKPuBstXn-i0o2MGNfY/preview')">  
-<div class="play">▶</div>  
-</div><!-- NEW TEASERS ADDED --><div class="card" onclick="openVid('https://drive.google.com/file/d/1nRKK3T38Z6aCOX7gLvl7kBb9vnsymZKy/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/1_T5eZ0MbHGAlp135lGQt0A3v3TkcLwvN/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/15s7RnXm7VX4Z0thMyNkMpc8hRjdParIv/preview')">  
-<div class="play">▶</div>  
-</div></div><h2>Wedding Reels</h2><div class="grid"><div class="card" onclick="openVid('https://drive.google.com/file/d/1vqKgAyj-9xVfwtqfvcrwq2sImIXWEOkC/preview')">  
-<div class="play">▶</div>  
-</div><div class="card" onclick="openVid('https://drive.google.com/file/d/10u_qYZuBXNgqBQMoORBRUlDOvxTHX0qi/preview')">  
-<div class="play">▶</div>  
-</div></div></div><!-- VIDEO MODAL --><div id="modal" onclick="closeVid()"><iframe  
-id="frame"  
-allow="autoplay; fullscreen"  
-allowfullscreen>  
-</iframe></div><script>  function openVid(link){
+<div>
+<a href="index.html">Home</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</div>
 
-document.getElementById("modal").style.display="block";
+</nav>
 
-document.getElementById("frame").src =
-link + "?autoplay=1";
+<div class="section">
 
-}
+<h2>Wedding Highlights</h2>
 
-function closeVid(){
+<div class="grid">
 
-document.getElementById("modal").style.display="none";
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1Sv7QPxdmAh2rLZmDKv_78ujfGZOj6Cb_/preview','_blank')">
+<div class="play">▶</div>
+</div>
 
-document.getElementById("frame").src = "";
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1-_XcmoaqxBEMNXv0-1qpV7GyFEghfxDS/preview','_blank')">
+<div class="play">▶</div>
+</div>
 
-}
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1T3JuIqc21HyKIykf6Ewt1iOYoPYmYgxD/preview','_blank')">
+<div class="play">▶</div>
+</div>
 
-</script></body>
+</div>
+
+<h2>Wedding Teasers</h2>
+
+<div class="grid">
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1FrXtLo1ElCcjUCMpt2PDi5ujMHcgOJLT/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1JKxOK9O26qe5ssRSxdalQklBYA-l2o9f/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1jRsGDKLc7ItPzVKPuBstXn-i0o2MGNfY/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1nRKK3T38Z6aCOX7gLvl7kBb9vnsymZKy/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1_T5eZ0MbHGAlp135lGQt0A3v3TkcLwvN/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/15s7RnXm7VX4Z0thMyNkMpc8hRjdParIv/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+</div>
+
+<h2>Wedding Reels</h2>
+
+<div class="grid">
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/1vqKgAyj-9xVfwtqfvcrwq2sImIXWEOkC/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+<div class="card"
+onclick="window.open('https://drive.google.com/file/d/10u_qYZuBXNgqBQMoORBRUlDOvxTHX0qi/preview','_blank')">
+<div class="play">▶</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
 
 </html>
